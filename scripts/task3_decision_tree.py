@@ -206,7 +206,7 @@ ax7 = fig.add_subplot(3, 3, 7)
 cv = StratifiedKFold(n_splits=10, shuffle=True, random_state=42)
 cv_rm = cross_val_score(models['RapidMiner'], X, y, cv=cv)
 cv_or = cross_val_score(models['Orange'],     X, y, cv=cv)
-ax7.boxplot([cv_rm, cv_or], labels=['RapidMiner', 'Orange'],
+ax7.boxplot([cv_rm, cv_or], tick_labels=['RapidMiner', 'Orange'],
             patch_artist=True,
             boxprops=dict(facecolor='lightblue'),
             medianprops=dict(color='red', linewidth=2))

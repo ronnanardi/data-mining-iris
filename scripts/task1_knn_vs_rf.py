@@ -164,7 +164,7 @@ for bar in bars2: axes[1, 0].text(bar.get_x()+bar.get_width()/2, bar.get_height(
                                    f'{bar.get_height():.3f}', ha='center', va='bottom', fontsize=8)
 
 # (e) CV Boxplot
-axes[1, 1].boxplot([cv_knn, cv_rf], labels=[f'KNN (k={best_k})', 'Random Forest'],
+axes[1, 1].boxplot([cv_knn, cv_rf], tick_labels=[f'KNN (k={best_k})', 'Random Forest'],
                    patch_artist=True,
                    boxprops=dict(facecolor='lightblue'),
                    medianprops=dict(color='red', linewidth=2))
